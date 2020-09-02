@@ -1,0 +1,72 @@
+<view class="cartContainer">
+  <view class="cart_addr" wx:if="{{!postalCode}}">
+    <button type="warn" plain bindtap="handleGetAddr">获取收货地址</button>
+  </view>
+  <view class="cart_addr_text" wx:else>
+    <view class="text_item">
+      <view>{{userName}}</view>
+      <view>{{address}}</view>
+    </view>
+    <view class="text_item">
+      <view>{{telNumber}}</view>
+      <view>邮政编码：{{postalCode}}</view>
+    </view>
+  </view>
+  <view class="cart_title">购物列表</view>
+  <view class="cart_list">
+    <block wx:if="{{cart.length>0}}">
+      <view 
+      class="list_item"
+      wx:for="{{cart}}"
+      wx:key="goods_id"
+      >
+        <view class="item_check">
+          <checkbox-group bindchange="handleChangeItem" data-id="{{item.goods_id}}">
+            <checkbox checked="{{item.check}}"></checkbox>
+          </checkbox-group>
+        </view>
+        <view class="item_img">
+          <image src="{{item.pics[0].pics_sma}}" mode="widthFix"></image>
+        </view>
+        <view class="item_group">
+          <view class="group_text">
+            {{item.goods_name}}
+          </view>
+          <view class="group_num">
+            <view class="num_price">
+              ￥ {{item.goods_price}}
+            </view>
+            <view class="num_tool">
+              <button bindtap="handleNumTool" data-id="{{item.goods_id}}" data-count="{{-1}}">-</button>
+              <text>{{item.num}}</text>
+              <button bindtap="handleNumTool" data-id="{{item.goods_id}}" data-count="{{1}}">+</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="empty">
+        <image src="../../icon/empty.png" mode="widthFix"></image>
+        <text>去选购商品吧~</text>
+      </view>
+    </block>
+  </view>
+  <view class="cart_footer">
+    <view class="footer_left">
+      <view class="allCheck">
+        <checkbox-group bindchange="handleChangeAll">
+          <checkbox checked="{{allCheck}}"></checkbox>
+        </checkbox-group>
+        <view>全选</view>
+      </view>
+      <view class="allPrice">
+        <view>合计：<span style="color:red">￥{{allPrice}}</span></view>
+        <view style="font-size:30rpx;color:#666666">包含运费</view>
+      </view>
+    </view>
+    <view class="footer_right" bindtap="handleGoPay">
+      <view class="pay">结算（{{totalNum}}）</view>
+    </view>
+  </view>
+</view>

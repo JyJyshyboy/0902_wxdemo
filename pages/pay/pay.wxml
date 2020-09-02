@@ -1,0 +1,42 @@
+<view class="cartContainer">
+  <view class="cart_addr_text">
+    <view class="text_item">
+      <view>{{userName}}</view>
+      <view>{{address}}</view>
+    </view>
+    <view class="text_item">
+      <view>{{telNumber}}</view>
+      <view>邮政编码：{{postalCode}}</view>
+    </view>
+  </view>
+  <view class="list_item" wx:for="{{cart}}" wx:key="goods_id">
+    <view class="item_img">
+      <image src="{{item.pics[0].pics_sma}}" mode="widthFix"></image>
+    </view>
+    <view class="item_group">
+      <view class="group_text">
+        {{item.goods_name}}
+      </view>
+      <view class="group_num">
+        <view class="num_price">
+          ￥ {{item.goods_price}}
+        </view>
+        <view class="num_tool">
+          X{{item.num}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="cart_footer">
+    <view class="footer_left">
+     
+      <view class="allPrice">
+        <view>合计：<span style="color:red">￥{{allPrice}}</span></view>
+        <view style="font-size:30rpx;color:#666666">包含运费</view>
+      </view>
+    </view>
+    <view class="footer_right" bindtap="handlePay">
+      <view class="pay">支付（{{totalNum}}）</view>
+    </view>
+  </view>
+</view>

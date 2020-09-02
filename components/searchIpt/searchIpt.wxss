@@ -1,0 +1,14 @@
+.searchIpt{
+  height: 90rpx;
+  padding: 10rpx;
+  background-color: #1296db;
+}
+.navigator{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15rpx;
+  color: #777777;
+}

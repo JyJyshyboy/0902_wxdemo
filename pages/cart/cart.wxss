@@ -1,0 +1,128 @@
+.cart_addr{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.cart_addr button{
+  width: 70%;
+}
+.cart_title{
+  color: red;
+  font-size: 50rpx;
+  padding: 30rpx 10rpx;
+  border-bottom: 1rpx solid #cccccc;
+}
+.cart_addr_text{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #cccccc;
+  padding: 30rpx;
+  height: 167rpx;
+}
+.text_item{
+  font-size: 25rpx;
+}
+.list_item{
+  display: flex;
+  width: 100%;
+  border-bottom: 1rpx solid #1296db;
+  padding: 20rpx 0;
+}
+.item_check{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item_img{
+  flex: 2;
+}
+.item_group{
+  flex: 4;
+  margin-left: 10rpx;
+}
+.group_num{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 80rpx;
+}
+.group_text{
+  font-size: 30rpx;
+  color: #333333;
+}
+.num_price{
+  color: red;
+}
+.num_tool{
+  display: flex;
+  margin-right: 20rpx;
+}
+.num_tool text{
+  padding: 0 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.num_tool button{
+  width: 55rpx;
+  height: 55rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty image{
+  width: 40%;
+  height: 40%;
+  margin-top: 100rpx;
+}
+.empty text{
+  color: #aaaaaa;
+  font-size: 40rpx;
+}
+.cartContainer{
+  position: relative;
+}
+.cart_footer{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1rpx solid #eeeeee;
+  padding: 10rpx 0;
+}
+.footer_left{
+  flex: 3;
+  display: flex;
+  justify-content: space-between;
+}
+.allCheck{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+}
+.allPrice{
+  margin-right: 20rpx;
+  font-size: 40rpx;
+}
+.footer_right{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+}
+.pay{
+  color: #ffffff;
+}

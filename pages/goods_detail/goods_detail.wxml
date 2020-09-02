@@ -1,0 +1,54 @@
+<view class="goods_detail">
+  <view class="swiper_content">
+    <swiper indicator-dots autoplay interval="5000" circular>
+      <swiper-item
+      wx:for="{{goods_detail.pics}}"
+      wx:key="index"
+      >
+        <image mode="widthFix" src="{{item.pics_mid}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="name_content">
+    <view class="goods_group">
+      <view class="goods_price">￥  {{goods_detail.goods_price}}</view>
+      <view class="goods_name">{{goods_detail.goods_name}}</view>
+    </view>
+    <view class="collection_group">
+      <view class="collection_icon" bindtap="handleCollection">
+        <image src="../../icon/star01.png" wx:if="{{!isCollection}}"></image>
+        <image src="../../icon/star02.png" wx:else></image>
+      </view>
+      <view class="collection_text">收藏</view>
+    </view>
+  </view>
+  <view class="detail_content">
+    <view class="detail_title">图文详情</view>
+    <view class="detail_text">
+      <rich-text nodes="{{goods_detail.goods_introduce}}"></rich-text>
+    </view>
+  </view>
+  <view class="detail_footer">
+    <view class="footer_left">
+      <view class="left_item" bindtap="handle">
+        <image src="../../icon/kefu.png"></image>
+        <view class="item_text">联系客服</view>
+        <button open-type="contact"></button>
+      </view>
+      <view class="left_item">
+        <image src="../../icon/fenxiang.png"></image>
+        <view class="item_text">分享</view>
+        <button open-type="share"></button>
+      </view>
+      <view class="left_item">
+        <image src="../../icon/gouwuche01.png"></image>
+        <view class="item_text">购物车</view>
+        <button bindtap="handleGoCart"></button>
+      </view>
+    </view>
+    <view class="footer_right">
+      <view class="right_item1" bindtap="handleCartAdd">加入购物车</view>
+      <view class="right_item2">立即购买</view>
+    </view>
+  </view>
+</view>

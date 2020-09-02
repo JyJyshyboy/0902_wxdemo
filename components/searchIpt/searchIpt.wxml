@@ -1,0 +1,3 @@
+<view class="searchIpt">
+  <navigator url="/pages/search/search" class="navigator">搜索</navigator>
+</view>

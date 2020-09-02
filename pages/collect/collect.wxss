@@ -1,0 +1,22 @@
+page{
+  background-color: #edece8;
+}
+.list{
+  margin-top: 40rpx;
+}
+.collect_list{
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1rpx solid #edece8;
+  display: flex;
+}
+.collect_img{
+  flex: 2;
+}
+.collect_img image{
+  width: 200rpx;
+  margin-left: 40rpx;
+}
+.collect_text{
+  flex: 3;
+}

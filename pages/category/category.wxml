@@ -1,0 +1,44 @@
+<view>
+  <Search></Search>
+  <view class="categoryGroup">
+    <scroll-view class="leftList" scroll-y>
+      <view 
+      class="{{index===currentIndex?'active':''}}"
+      wx:for="{{leftList}}"
+      wx:key="index"
+      bindtap="handleLeftItem"
+      data-index="{{index}}"
+      >
+        <view class="leftItem">
+          {{item}}
+        </view>
+      </view>
+    </scroll-view>
+    <scroll-view class="rightGroup" scroll-top="{{scrollTop}}" scroll-y>
+      <view
+      wx:for="{{rightList}}"
+      wx:for-item="item1"
+      wx:for-index="index1"
+      wx:key="cat_id"
+      >
+        <view class="right_title">/ {{item1.cat_name}} /</view>
+        <view class="goodsGroup">  
+          <view 
+          class="right_goods"
+          wx:for="{{item1.children}}"
+          wx:for-item="item2"
+          wx:for-index="index2"
+          wx:key="cat_name"
+          >
+            <navigator url="/pages/goods/goods?cid={{item2.cat_id}}">
+              <view>
+                <image src="{{item2.cat_icon}}" mode="widthFix"></image>
+                <text>{{item2.cat_name}}</text>
+              </view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

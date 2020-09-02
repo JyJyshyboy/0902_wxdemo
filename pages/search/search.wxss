@@ -1,0 +1,33 @@
+page{
+  background-color: #edece8;
+  padding: 20rpx;
+}
+.search_ipt{
+  height: 70rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.search_ipt input{
+  flex: 1;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10rpx;
+  padding-left: 30rpx;
+}
+.search_ipt button{
+  height: 100%;
+  margin-left: 10rpx;
+  font-size: 28rpx;
+}
+.search_list{
+  margin-top: 20rpx;
+}
+.search_item{
+  background-color: #ffffff;
+  font-size: 30rpx;
+  padding: 20rpx 10rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border-bottom: 1rpx solid #edece8;
+}

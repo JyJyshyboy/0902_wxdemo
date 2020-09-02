@@ -1,0 +1,10 @@
+.auth_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.auth_btn button{
+  width: 70%;
+  margin-top: 100rpx;
+}

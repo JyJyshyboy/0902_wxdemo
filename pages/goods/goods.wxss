@@ -1,0 +1,25 @@
+.goods_item{
+  display: flex;
+  border-bottom: 2rpx solid #cccccc;
+}
+.goods_img{
+  flex: 2;
+  width: 100%;
+  padding: 15rpx;
+}
+.goods_text{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.goods_title{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.goods_price{
+  color: #1296db;
+  font-size: 34rpx;
+}

@@ -1,0 +1,44 @@
+.categoryGroup{
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 90rpx);
+}
+.leftList{
+  flex: 2;
+  }
+.leftItem{
+  text-align: center;
+  padding: 15rpx 0;
+  font-size: 27rpx;
+}
+.active{
+  color: #1296db;
+}
+.rightGroup{
+  flex: 5;
+  display: flex;
+  justify-content: center;
+  }
+.right_title{
+  text-align: center;
+  font-size: 30rpx;
+  color: #999999;
+}
+.goodsGroup{
+  display: flex;
+  flex-wrap: wrap;
+  }
+
+.right_goods{
+  width: 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20rpx 0;
+}
+.right_goods image{
+  width: 100%;
+}
+.right_goods text{
+  font-size: 25rpx;
+}

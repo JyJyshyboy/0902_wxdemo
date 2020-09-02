@@ -1,0 +1,41 @@
+.swiperContent swiper{
+  width: 750rpx;
+  height: 340rpx;
+}
+
+.swiperContent image{
+  width: 100%;
+}
+
+.categoryContent{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.categoryItem{
+  display: flex;
+  justify-content: center;
+  padding: 20rpx 0;
+  flex: 1;
+}
+.categoryItem image{
+  width: 140rpx;
+  height: 140rpx;
+}
+.floorContent{
+  padding: 20rpx;
+}
+.floorTitle image{
+  height: 58rpx;
+}
+
+.floorText image{
+  float: left;
+  width: 33.33%;
+  padding: 10rpx;
+}
+.floorText image:nth-last-child(-n+4){
+    /*原图宽高为  232*386 */
+    height: 27.72vw;
+}

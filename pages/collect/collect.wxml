@@ -1,0 +1,21 @@
+<tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+	<view class="list">
+		<block wx:if="{{tabs[0].isActive}}">
+      <view 
+      wx:for="{{collection}}" 
+      wx:key="goods_id" 
+      bindtap="handleGoDetail"
+      >
+        <navigator url="/pages/goods_detail/goods_detail?goods_id={{item.goods_id}}" class="collect_list">
+          <view class="collect_img">
+            <image src="{{item.goods_small_logo}}" mode="widthFix"></image>
+          </view>
+          <view class="collect_text">{{item.goods_name}}</view>
+        </navigator>
+      </view>
+    </block>
+		<block wx:if="{{tabs[1].isActive}}"></block>
+		<block wx:if="{{tabs[2].isActive}}"></block>
+		<block wx:if="{{tabs[3].isActive}}"></block>
+	</view>
+</tabs>

@@ -1,0 +1,66 @@
+<view class="userContainer">
+	<view class="user_head">
+		<view class="user_img" wx:if="{{userInfo}}">
+			<image class="user_big" src="{{userInfo.avatarUrl}}"></image>
+			<view class="user_info">
+				<image class="user_sma" src="{{userInfo.avatarUrl}}"></image>
+				<text>{{userInfo.nickName}}</text>
+			</view>
+		</view>
+		<view class="user_btn" wx:else>
+			<view class="user_login" bindtap="handleGoLogin">请登录</view>
+		</view>
+	</view>
+	<view class="user_body">
+		<view class="user_goods">
+			<view class="goods_item">
+				<view class="num">0</view>
+				<text>收藏的店铺</text>
+			</view>
+			<view class="goods_item" bindtap="handleGoCollect">
+				<view class="num">{{goodsNum}}</view>
+				<text>收藏的商品</text>
+			</view>
+			<view class="goods_item">
+				<view class="num">0</view>
+				<text>关注的商品</text>
+			</view>
+			<view class="goods_item">
+				<view class="num">0</view>
+				<text>我的足迹</text>
+			</view>
+		</view>
+		<view class="user_title">
+			我的订单
+		</view>
+		<view class="user_order">
+      <navigator url="/pages/order/order?type=1" class="order_item">
+				<image src="../../icon/dingdan.png"></image>
+				<text>全部订单</text>
+			</navigator>
+      <navigator url="/pages/order/order?type=2" class="order_item">
+				<image src="../../icon/daifukuan.png"></image>
+				<text>待付款</text>
+			</navigator>
+      <navigator url="/pages/order/order?type=3" class="order_item">
+				<image src="../../icon/daishouhuo.png"></image>
+				<text>待收货</text>
+			</navigator>
+      <navigator url="/pages/order/order?type=4" class="order_item">
+				<image src="../../icon/tuihuo.png"></image>
+				<text>退款/退货</text>
+			</navigator>
+    </view>
+		<view class="user_address">
+			收货地址管理
+		</view>
+		<view class="user_contact">
+			<view>联系客服</view>
+			<view>400-618-4000</view>
+		</view>
+		<view class="user_idea" bindtap="handleGoFb">意见反馈</view>
+		<view class="user_intr">关于我们</view>
+		<view class="user_share">把应用推荐给其他人</view>
+		<view class="end"></view>
+	</view>
+</view>

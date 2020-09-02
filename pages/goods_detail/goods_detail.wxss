@@ -1,0 +1,90 @@
+.swiper_content swiper{
+  text-align: center;
+  height: 70vw;
+}
+.swiper_content image{
+  width: 70%;
+}
+.name_content{
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 2rpx solid #cccccc;
+}
+.goods_group{
+  flex: 4;
+  border-right: 1rpx solid #cccccc;
+}
+.goods_price{
+  color: red;
+}
+.collection_group{
+  flex: 1;
+  color: #cccccc;
+  text-align: center;
+}
+.collection_icon image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.detail_content{
+  padding: 20rpx;
+}
+.detail_title{
+  color: red;
+  font-size: 50rpx;
+}
+.detail_text{
+  margin-top: 20rpx;
+}
+.detail_footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  padding-top: 10rpx;
+}
+.footer_left{
+  flex: 1;
+  display: flex;
+  background-color: #ffffff;
+}
+.footer_right{
+  flex: 1;
+  display: flex;
+  color: #ffffff;
+}
+.left_item{
+  flex: 1;
+  text-align: center;
+  position: relative;
+}
+.left_item image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 14rpx;
+}
+.left_item button{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.item_text{
+  font-size: 30rpx;
+}
+.right_item1{
+  flex: 1;
+  display: flex;
+  background-color: yellow;
+  justify-content: center;
+  align-items: center;
+}
+.right_item2{
+  flex: 1;
+  display: flex;
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+}
